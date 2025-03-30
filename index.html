@@ -5,20 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JDOurForever... Save the Date</title>
 
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="JDOurForever – Save the Date 💍" />
+  <meta property="og:description" content="Joy & Dozie are getting married! Tap to watch our Save the Date ❤️" />
+  <meta property="og:image" content="https://itodojoy.github.io/JDOurForever/cover.jpg" />
+  <meta property="og:url" content="https://itodojoy.github.io/JDOurForever/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="JDOurForever" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="JDOurForever – Save the Date 💍" />
+  <meta name="twitter:description" content="Joy & Dozie are getting married! Tap to watch our Save the Date ❤️" />
+  <meta name="twitter:image" content="https://itodojoy.github.io/JDOurForever/cover.jpg" />
+
   <style>
     html, body {
       margin: 0;
       padding: 0;
-      height: 100%;
-      width: 100%;
       background: black;
-      overflow: hidden;
-      font-family: 'Segoe UI', sans-serif;
+      overflow-x: hidden;
     }
     .video-wrapper {
       position: relative;
       width: 100%;
-      height: 100%;
+      height: 100vh;
     }
     .video-wrapper iframe {
       position: absolute;
@@ -28,99 +39,59 @@
       height: 100%;
       border: none;
     }
-
-    /* Modal Fullscreen Style */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0,0,0,0.85);
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-    }
-    .modal-content {
+    .calendar-section {
       background-color: #B7A99A;
-      padding: 30px 20px;
-      border-radius: 16px;
-      max-width: 90%;
-      width: 360px;
+      padding: 30px 10px;
       text-align: center;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      font-family: sans-serif;
     }
-    .modal-content h2 {
-      margin-top: 0;
-      color: #333;
-      font-size: 22px;
+    .calendar-section h2 {
+      color: #3B2F2F;
+      margin-bottom: 15px;
+      font-size: 1.5rem;
     }
-    .calendar-links a {
-      display: block;
-      margin: 12px 0;
-      color: #333;
+    .calendar-section a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 20px;
+      background: white;
+      color: #3B2F2F;
+      border-radius: 5px;
       text-decoration: none;
       font-weight: bold;
-      font-size: 16px;
+      transition: all 0.3s ease;
     }
-    .close-btn {
-      margin-top: 20px;
-      background: #333;
-      color: #fff;
-      border: none;
-      padding: 10px 16px;
-      border-radius: 8px;
-      font-size: 14px;
-      cursor: pointer;
+    .calendar-section a:hover {
+      background: #3B2F2F;
+      color: white;
     }
   </style>
 </head>
-
 <body>
+
   <div class="video-wrapper">
     <iframe 
-      id="vimeoPlayer"
-      src="https://player.vimeo.com/video/1070728281?autoplay=1&muted=1&loop=0&autopause=0&title=0&byline=0&portrait=0"
+      src="https://player.vimeo.com/video/1070728281?autoplay=1&muted=1&loop=1&autopause=0&title=0&byline=0&portrait=0"
       allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
       allowfullscreen
       title="JDOurForever... Save the Date">
     </iframe>
   </div>
 
-  <!-- Modal -->
-  <div id="calendarModal" class="modal">
-    <div class="modal-content">
-      <h2>Add to Calendar</h2>
-      <div class="calendar-links">
-        <a href="https://addcal.co/e/r329kgely9ak/google" target="_blank">📅 Google Calendar</a>
-        <a href="https://addcal.co/e/r329kgely9ak/apple" target="_blank">🍎 Apple Calendar</a>
-        <a href="https://addcal.co/e/r329kgely9ak/outlook" target="_blank">✉️ Outlook</a>
-        <a href="https://addcal.co/e/r329kgely9ak/office365" target="_blank">💼 Office 365</a>
-        <a href="https://addcal.co/e/r329kgely9ak/yahoo" target="_blank">📩 Yahoo Calendar</a>
-        <a href="https://addcal.co/e/r329kgely9ak/ics" target="_blank">📝 Download .ICS</a>
-      </div>
-      <button class="close-btn" onclick="closeModal()">Close</button>
-    </div>
+  <div class="calendar-section">
+    <h2>Add to Calendar 📅</h2>
+    <a href="https://addcal.co/e/r329kgely9ak/google" target="_blank">Google</a>
+    <a href="https://addcal.co/e/r329kgely9ak/apple" target="_blank">Apple</a>
+    <a href="https://addcal.co/e/r329kgely9ak/outlook" target="_blank">Outlook</a>
+    <a href="https://addcal.co/e/r329kgely9ak/office365" target="_blank">Office 365</a>
+    <a href="https://addcal.co/e/r329kgely9ak/yahoo" target="_blank">Yahoo</a>
+    <a href="https://addcal.co/e/r329kgely9ak/ics" target="_blank">ICS</a>
   </div>
 
   <script src="https://player.vimeo.com/api/player.js"></script>
-  <script>
-    const iframe = document.getElementById('vimeoPlayer');
-    const player = new Vimeo.Player(iframe);
-    const modal = document.getElementById('calendarModal');
-
-    player.on('ended', function() {
-      modal.style.display = 'flex';
-    });
-
-    function closeModal() {
-      modal.style.display = 'none';
-    }
-  </script>
 </body>
 </html>
+
 
 
 
