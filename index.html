@@ -13,6 +13,7 @@
       width: 100%;
       background: black;
       overflow: hidden;
+      font-family: 'Segoe UI', sans-serif;
     }
     .video-wrapper {
       position: relative;
@@ -28,7 +29,7 @@
       border: none;
     }
 
-    /* Modal styles */
+    /* Modal Fullscreen Style */
     .modal {
       display: none;
       position: fixed;
@@ -37,42 +38,50 @@
       top: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0,0,0,0.7);
+      background-color: rgba(0,0,0,0.85);
       justify-content: center;
       align-items: center;
+      padding: 20px;
     }
     .modal-content {
       background-color: #B7A99A;
-      padding: 20px;
-      border-radius: 10px;
+      padding: 30px 20px;
+      border-radius: 16px;
+      max-width: 90%;
+      width: 360px;
       text-align: center;
-      max-width: 300px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
     }
     .modal-content h2 {
       margin-top: 0;
       color: #333;
+      font-size: 22px;
     }
     .calendar-links a {
       display: block;
-      margin: 10px 0;
+      margin: 12px 0;
       color: #333;
       text-decoration: none;
       font-weight: bold;
+      font-size: 16px;
     }
     .close-btn {
-      margin-top: 10px;
+      margin-top: 20px;
       background: #333;
       color: #fff;
       border: none;
-      padding: 8px 12px;
-      border-radius: 5px;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 14px;
       cursor: pointer;
     }
   </style>
 </head>
+
 <body>
   <div class="video-wrapper">
-    <iframe id="vimeoPlayer"
+    <iframe 
+      id="vimeoPlayer"
       src="https://player.vimeo.com/video/1070728281?autoplay=1&muted=1&loop=0&autopause=0&title=0&byline=0&portrait=0"
       allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
       allowfullscreen
@@ -87,10 +96,10 @@
       <div class="calendar-links">
         <a href="https://addcal.co/e/r329kgely9ak/google" target="_blank">📅 Google Calendar</a>
         <a href="https://addcal.co/e/r329kgely9ak/apple" target="_blank">🍎 Apple Calendar</a>
-        <a href="https://addcal.co/e/r329kgely9ak/outlook" target="_blank">📧 Outlook</a>
+        <a href="https://addcal.co/e/r329kgely9ak/outlook" target="_blank">✉️ Outlook</a>
         <a href="https://addcal.co/e/r329kgely9ak/office365" target="_blank">💼 Office 365</a>
-        <a href="https://addcal.co/e/r329kgely9ak/yahoo" target="_blank">📨 Yahoo Calendar</a>
-        <a href="https://addcal.co/e/r329kgely9ak/ics" target="_blank">📄 Download .ICS</a>
+        <a href="https://addcal.co/e/r329kgely9ak/yahoo" target="_blank">📩 Yahoo Calendar</a>
+        <a href="https://addcal.co/e/r329kgely9ak/ics" target="_blank">📝 Download .ICS</a>
       </div>
       <button class="close-btn" onclick="closeModal()">Close</button>
     </div>
@@ -112,6 +121,8 @@
   </script>
 </body>
 </html>
+
+
 
 
 
